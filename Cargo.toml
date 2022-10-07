@@ -15,3 +15,19 @@ name = "learn_backend_rust"
 actix-web = "4.2.1"
 reqwest = "0.11.12"
 tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
+serde = "1.0.145"
+config = "0.13.2"
+chrono = "0.4.22"
+uuid = { version = "1.1.2", features = ["v4"] }
+
+[dependencies.sqlx]
+version = "0.6.2"
+default-features = false
+features = [
+  "runtime-actix-rustls",
+  "macros",
+  "postgres",
+  "uuid",
+  "chrono",
+  "migrate"
+]

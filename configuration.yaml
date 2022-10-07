@@ -1,0 +1,8 @@
+application_port: 8000
+database:
+  host: "free-tier8.aws-ap-southeast-1.cockroachlabs.cloud"
+  port: 26257
+  username: "xieyu"
+  password: "HWtbMWBBI1YUiJHNLMZCeA"
+  database_name: "defaultdb"
+  options: "?sslmode=verify-full&options=--cluster%3Dplain-monkey-2765"
