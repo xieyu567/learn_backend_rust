@@ -27,26 +27,6 @@ async fn spawn_app() -> TestApp {
     }
 }
 
-// pub async fn configure_database(config: &DatabaseSettings) -> PgPool {
-//     let mut connection = PgConnection::connect(&config.connection_string_without_db())
-//         .await
-//         .expect("Failed to connect to CockroachDB.");
-//     connection
-//         .execute(&*format!(r#"CREATE DATABASE "{}";"#, config.database_name))
-//         .await
-//         .expect("Failed to create database.");
-
-//     let connection_pool = PgPool::connect(&config.connection_string())
-//         .await
-//         .expect("Failed to connect to Postgres.");
-//     sqlx::migrate!("./migrations")
-//         .run(&connection_pool)
-//         .await
-//         .expect("Failed to migrate the database");
-
-//     connection_pool
-// }
-
 #[tokio::test]
 async fn health_check_works() {
     let address = spawn_app().await.address;
