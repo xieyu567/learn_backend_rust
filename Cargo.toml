@@ -12,15 +12,16 @@ path = "src/main.rs"
 name = "learn_backend_rust"
 
 [dependencies]
-actix-web = "4.2.1"
-reqwest = "0.11.12"
-tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
-serde = "1.0.145"
-config = "0.13.2"
-chrono = "0.4.22"
-uuid = { version = "1.1.2", features = ["v4"] }
-env_logger = "0.9.1"
-log = "0.4.17"
+actix-web = "4.2"
+reqwest = "0.11"
+tokio = { version = "1.21", features = ["macros", "rt-multi-thread"] }
+serde = "1.0"
+config = "0.13"
+chrono = "0.4"
+uuid = { version = "1.1", features = ["v4"] }
+env_logger = "0.9"
+log = "0.4"
+tracing = { version = "0.1", features = ["log"] }
 
 [dependencies.sqlx]
 version = "0.6.2"
